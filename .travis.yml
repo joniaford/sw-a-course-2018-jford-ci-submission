@@ -2,8 +2,5 @@ language: c
 branches:
  only:
   -"master"
-os: osx
-script:
-- make hello
-- ./hello
+script: make hello && ./hello
   
