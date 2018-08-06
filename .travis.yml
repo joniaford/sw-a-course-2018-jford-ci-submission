@@ -1,9 +1,6 @@
 language: c
 
-script:
-  - make hello
-  
-  before_install:
+before_install:
   - wget http://downloads.sourceforge.net/project/cunit/CUnit/2.1-2/CUnit-2.1-2-src.tar.bz2
   - tar -xvjpf CUnit-2.1-2-src.tar.bz2
   - cd CUnit-2.1-2
@@ -15,3 +12,7 @@ script:
   - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/lib:$LD_LIBRARY_PATH
   - cd ..
   - cd c
+  
+script:
+  - make hello
+  
