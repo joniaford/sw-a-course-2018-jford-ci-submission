@@ -20,16 +20,37 @@ Skynet is a CI system that interfaces to Jenkins. One benefit of utilizing Jenki
 Skynet utlizies a Job-DSL Plugin to create jobs. The DSL allows us to describe jobs and the plugin manages and maintains scripts. Jobs are configured with Lua files. Whereas with TravisCI the dependencies are defined the .travis.yml file, the dependencies when using Skynet are installed directly on machines. This may create a longer initial setup, but will keep configuration files well maintained. The Skynet interface is a little difficult to navigate if you are not familiar with it and may take time to adjust. Including and excluding jobs, skipping builds, and building only specific branches can be acheived through Skynet, but requires some work-arounds and additional time and effort. With Skynet, we would also be able to run builds in parallel.
 
 ## Comparison Overview
-| Skynet | TravisCI |
-|---------------------- |
-| +Compatible with all OS | X Not compatible with Windows |
-| +Free   | X Will require monthly subscription  |
-| -Must host our own servers   | -Servers provided  |
-| X Longer setup time   | + Quick and easy setup  |
-| X Below average UI   |  +Easy and sleek UI |
-| - Larger setup costs for servers | +Relatively low setup cost |
-| + Requires only maintenance cost longterm, room for growth   |  X Large costs incurred for growth |
-| X PRs built on the same script   |  + Can reconfigure for different PRs |
+### Skynet   
 
+Pros:
+ + Compatible with all OS  
+ + Free   
+ + Requires only maintenance cost longterm, room for growth  
+ 
+ Cons:
+ + Longer setup time    
+ + Below average UI     
+ + Larger setup costs for servers 
+ + PRs built on the same script  
+ 
+Neutral:
+  - Must host our own servers
+
+ 
+### TravisCI 
+
+Pros:
+ + Quick and easy setup   
+ + Easy and sleek UI
+ + Can reconfigure for different PRs  
+ 
+ Cons:
+ + Not compatible with Windows    
+ + Will require monthly subscription     
+ + Large costs incurred for growth  
+ 
+Neutral:
+  - Servers provided
+ 
 ## Recommendation
 Based on these findings, I recommend Skynet as the CI system for AllIn Technologies. While Skynet requires higher initial cost and more setup time, I believe it gives our company more room for growth. TravisCI restricts our OS usage and the power of the build servers. Currently there do not seem to be any plans to expand TravisCI compatibilties with Windows and controlling our own servers will cost us much more in the long run rather than starting with our own initially. Although it will require more work and effort, the UI for Skynet can also be upgraded by our team to include an easier UI with functions the team deems necessary and nice to have. Our company is on the brink of major growth and I believe TravisCI may hinder that growth and incur more cost.
